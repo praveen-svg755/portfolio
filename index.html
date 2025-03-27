@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+     <div class="image-div">
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p id="typing-text">Hi, I'm Thiruveedi praveen, a <span class="web-dev">WEB DEVELOPER</span> </p>
+        
+    </section>
+    <div class="image">
+        <img id="profile-img" src="WhatsApp Image 2025-01-17 at 23.33.52_eb71c5db.jpg" alt="">
+    </div>
+</div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="about-me">Highly Motivated 2nd Year Computer Science Student with Strong Programming. Data Structures and Algorithms to Contribute to innovation Projects and learn From industry leaders an internship opportunity<br/>I am 20 years old and currently pursuing my B.Tech 2nd year at Potti Sriramulu Chalavadi Mallikarjunarao College of Engineering and Technology with a CGPA of 8.4 . I am from Ganguru, Vijayawada, Andhra Pradesh. I have a strong interest in Web Development, Artificial Intelligence. I am actively learning React.js and have worked on projects like an e-commerce website, weather application, and a to-do list app. </p>
+    </section><br>
+    
+  
+
+    <!-- Portfolio Section -->
+    <center><h2>Projects</h2></center>
+    <section id="portfolio">
+        
+        <div class="portfolio-item">
+            <h3>Infinity Buy (front-End only)</h3>
+            <p>Developed a fully functional e-commerce shopping website using React.js, delivering a seamless and responsive user experience for browsing and purchasing products. Implemented an intuitive and visually appealing user interface with optimized navigation, ensuring ease of use for customers. Designed and integrated efficient product filtering, categorization, and search functionality to enhance discoverability. Leveraged state management techniques for smooth interactions and dynamic updates. Ensured cross-device compatibility and performance optimization for a fast and engaging shopping experience.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Weather App</h3>
+            <p>Developed a dynamic and interactive weather application using React.js that fetches real-time weather data from the OpenWeatherMap API. The application displays essential weather details such as temperature, wind speed, and humidity, providing users with accurate and up-to-date information. Implemented a clean and user-friendly interface with a visually appealing design, ensuring ease of navigation. Integrated search functionality, allowing users to check weather conditions for different locations. Applied responsive design principles to ensure a seamless experience across various devices, including desktops, tablets, and mobile phones. Optimized API calls and state management to enhance performance and ensure smooth real-time updates.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>To-Do-List</h3>
+            <p>Developed a fully functional To-Do List application using HTML, CSS, and JavaScript, enabling users to efficiently manage their daily tasks. Implemented features that allow users to add, delete, and mark tasks as completed, enhancing task organization and productivity. Integrated local storage, ensuring that tasks persist even after page reloads or browser closures, providing a seamless user experience. Designed a responsive and intuitive user interface, making the application accessible across various devices, including desktops, tablets, and smartphones. Applied CSS animations and transitions for smooth interactions, improving visual appeal. Optimized JavaScript logic for better performance and user engagement..</p>
+        </div>
+    </section><br>
+
+    <!-- Contact Section -->
+     <div class="contact-div">
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="d4e98f30-a359-491b-92e4-920cb85a9a91">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <div>
+    <img src="rectangle.png" alt="contack-image" id="contact-image">
+   </div>
+</div>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Praveen Thiruveedi. All Rights Reserved.</p>
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const typingText = document.getElementById("typing-text");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    typingText.style.animation = "none";
+                    void typingText.offsetWidth; // Trigger reflow
+                    typingText.style.animation = "typing 4s steps(40, end), blink 0.5s step-end infinite";
+                }
+            });
+        },
+        { threshold: 0.5 } // Trigger when 50% of the element is visible
+    );
+
+    observer.observe(typingText);
+});
+
+</script>
+</html>
